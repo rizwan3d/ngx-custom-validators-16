@@ -1,11 +1,11 @@
 {
-  "name": "ngx-custom-validators",
-  "version": "11.0.1",
+  "name": "@rizwan3d/ngx-custom-validators-16",
+  "version": "11.0.3",
   "description": "Angular custom directives for validation",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng-packagr -p package.json",
+    "build": "ng-packagr",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rsaenen/ngx-custom-validators.git"
+    "url": "git+https://github.com/rizwan3d/ngx-custom-validators-16"
   },
   "keywords": [
     "angular",
@@ -30,40 +30,25 @@
   "author": "Ralf Saenen <ralf.saenen@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rsaenen/ngx-custom-validators/issues"
+    "url": "https://github.com/rizwan3d/ngx-custom-validators-16/issues"
   },
-  "ngPackage": {
-    "lib": {
-      "entryFile": "public_api.ts"
-    },
-    "whitelistedNonPeerDependencies": [
-      "@angular/*",
-      "bootstrap",
-      "moment",
-      "rxjs",
-      "tslib",
-      "zone.js"
-    ]
-  },
-  "homepage": "https://github.com/rsaenen/ngx-custom-validators#readme",
+  "homepage": "https://github.com/rizwan3d/ngx-custom-validators-16#readme",
   "private": false,
   "peerDependencies": {
     "@angular/common": "^16.2.5",
     "@angular/core": "^16.2.5",
-    "@angular/forms": "^16.2.5"
-  },
-  "dependencies": {
-    "@angular/common": "^16.2.5",
     "@angular/compiler": "^16.2.5",
-    "@angular/core": "^16.2.5",
     "@angular/forms": "^16.2.5",
-    "@angular/platform-browser": "^16.2.5",
     "@angular/platform-browser-dynamic": "^16.2.5",
-    "ajv": "^8.12.0",
     "moment": "2.29.4",
     "rxjs": "7.8.1",
     "tslib": "2.6.2",
-    "zone.js": "0.13.3"
+    "zone.js": "0.13.3",
+    "@angular/platform-browser": "^16.2.5",
+    "ajv": "^8.12.0"
+  },
+  "dependencies": {
+    
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "16.2.2",
@@ -82,7 +67,7 @@
     "karma-coverage-istanbul-reporter": "3.0.3",
     "karma-jasmine": "5.1.0",
     "karma-jasmine-html-reporter": "2.1.0",
-    "ng-packagr": "16.2.3",
+    "ng-packagr": "^16.2.3",
     "protractor": "7.0.0",
     "ts-node": "10.9.1",
     "tslint": "6.1.3",
