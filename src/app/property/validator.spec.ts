@@ -29,7 +29,7 @@ describe('Property validator', () => {
   });
 
   it('Input is object and has no two properties', () => {
-    const control = new FormControl({ value: 1 });
+    const control = new FormControl({ value: 1 } as any);
     expect(property('id,value')(control)).toEqual({ hasProperty: { value: 'id,value' } });
   });
 });
