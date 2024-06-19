@@ -157,9 +157,10 @@ export class AppModule {
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" url>
 <p *ngIf="field.errors?.url">error message</p>
 
-<!-- Optionally, configure the kind of URLs allowed via urlOptions. [See here](https://github.com/validatorjs/validator.js/blob/2b6b0fa62f5be13202cf376782df154fe42c5c88/src/lib/isURL.js#L8) for a list of options and their defaults. -->
+<!-- Optionally, configure the kind of URLs allowed via urlOptions. -->
  <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" url [urlOptions]="{require_protocol: true}">
 ```
+ [See here](https://github.com/validatorjs/validator.js/blob/2b6b0fa62f5be13202cf376782df154fe42c5c88/src/lib/isURL.js#L8) for a list of options and their defaults.
 
 ### email
 
@@ -167,9 +168,10 @@ export class AppModule {
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" ngvemail>
 <p *ngIf="field.errors?.email">error message</p>
 
-<!-- Optionally, configure the kind of emails allowed via emailOptions. [See here](https://github.com/validatorjs/validator.js/blob/2b6b0fa62f5be13202cf376782df154fe42c5c88/src/lib/isEmail.js#L8) for a list of options and their defaults. -->
+<!-- Optionally, configure the kind of emails allowed via emailOptions. -->
  <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" ngvemail [emailOptions]="{allow_display_name: true}">
 ```
+[See here](https://github.com/validatorjs/validator.js/blob/2b6b0fa62f5be13202cf376782df154fe42c5c88/src/lib/isEmail.js#L8) for a list of options and their defaults.
 
 ### date
 
