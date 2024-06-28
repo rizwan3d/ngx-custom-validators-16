@@ -1,12 +1,13 @@
 # Description
 
-Angular Custom Validators, forked from [ng2-validation](https://github.com/yuyang041060120/ng2-validation).
-Directives for form validation (template or model driven).
+Provides directives for form validation (template or model driven) for many validation needs. Supports Angular 16 and higher.
+
+Originally forked from [ng2-validation](https://github.com/yuyang041060120/ng2-validation).
 
 # Installation
 
 ```bash
-npm i @rizwan3d/ngx-custom-validators-16 --save
+npm i @davidda/ngx-custom-validators --save
 ```
 
 # Validators
@@ -593,5 +594,5 @@ this.form = new FormGroup({
 ```
 
 # For developpers
-To run the projet : `npm start`
-Don't forget to run `npm test` and `npm lint` before each pull request. Thanks !
+To compile the projet : `npx ng-packagr`
+Don't forget to run `npm test` before each pull request. Thanks!
