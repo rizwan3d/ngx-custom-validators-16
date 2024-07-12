@@ -11,7 +11,8 @@ const GREATER_THAN_EQUAL_VALIDATOR: any = {
 
 @Directive({
   selector: '[gte][formControlName],[gte][formControl],[gte][ngModel]',
-  providers: [GREATER_THAN_EQUAL_VALIDATOR]
+  providers: [GREATER_THAN_EQUAL_VALIDATOR],
+  standalone: true,
 })
 export class GreaterThanEqualValidator implements Validator, OnInit, OnChanges {
   @Input() gte: number;
@@ -34,7 +35,7 @@ export class GreaterThanEqualValidator implements Validator, OnInit, OnChanges {
     }
   }
 
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return this.validator(c);
   }
 

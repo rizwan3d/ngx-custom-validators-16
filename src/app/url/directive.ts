@@ -12,7 +12,8 @@ const URL_VALIDATOR: any = {
 
 @Directive({
   selector: '[url][formControlName],[url][formControl],[url][ngModel]',
-  providers: [URL_VALIDATOR]
+  providers: [URL_VALIDATOR],
+  standalone: true,
 })
 export class UrlValidator implements Validator {
   @Input()

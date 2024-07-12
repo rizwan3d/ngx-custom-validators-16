@@ -11,7 +11,8 @@ const MAX_DATE_VALIDATOR: any = {
 
 @Directive({
   selector: '[maxDate][formControlName],[maxDate][formControl],[maxDate][ngModel]',
-  providers: [MAX_DATE_VALIDATOR]
+  providers: [MAX_DATE_VALIDATOR],
+  standalone: true,
 })
 export class MaxDateValidator implements Validator, OnInit, OnChanges {
   @Input() maxDate;
@@ -34,7 +35,7 @@ export class MaxDateValidator implements Validator, OnInit, OnChanges {
     }
   }
 
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return this.validator(c);
   }
 

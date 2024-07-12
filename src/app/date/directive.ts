@@ -11,10 +11,11 @@ const DATE_VALIDATOR: any = {
 
 @Directive({
   selector: '[date][formControlName],[date][formControl],[date][ngModel]',
-  providers: [DATE_VALIDATOR]
+  providers: [DATE_VALIDATOR],
+  standalone: true,
 })
 export class DateValidator implements Validator {
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return date(c);
   }
 }
