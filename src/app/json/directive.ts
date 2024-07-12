@@ -10,7 +10,7 @@ const JSON_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[json][formControlName],[json][formControl],[json][ngModel]',
+  selector: '[ngv-json][formControlName],[ngv-json][formControl],[ngv-json][ngModel]',
   providers: [JSON_VALIDATOR],
   standalone: true,
 })

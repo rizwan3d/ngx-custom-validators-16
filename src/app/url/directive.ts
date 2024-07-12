@@ -11,7 +11,7 @@ const URL_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[url][formControlName],[url][formControl],[url][ngModel]',
+  selector: '[ngv-url][formControlName],[ngv-url][formControl],[ngv-url][ngModel]',
   providers: [URL_VALIDATOR],
   standalone: true,
 })

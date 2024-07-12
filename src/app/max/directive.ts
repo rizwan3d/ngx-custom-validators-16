@@ -10,7 +10,7 @@ const MAX_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[max][formControlName],[max][formControl],[max][ngModel]',
+  selector: '[ngv-max][formControlName],[ngv-max][formControl],[ngv-max][ngModel]',
   providers: [MAX_VALIDATOR],
   standalone: true,
 })

@@ -10,7 +10,7 @@ const NOT_EQUAL_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[notEqual][formControlName],[notEqual][formControl],[notEqual][ngModel]',
+  selector: '[ngv-notEqual][formControlName],[ngv-notEqual][formControl],[ngv-notEqual][ngModel]',
   providers: [NOT_EQUAL_VALIDATOR],
   standalone: true,
 })

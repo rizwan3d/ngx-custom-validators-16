@@ -10,7 +10,7 @@ const UUID_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[uuid][formControlName],[uuid][formControl],[uuid][ngModel]',
+  selector: '[ngv-uuid][formControlName],[ngv-uuid][formControl],[ngv-uuid][ngModel]',
   providers: [UUID_VALIDATOR],
   standalone: true,
 })

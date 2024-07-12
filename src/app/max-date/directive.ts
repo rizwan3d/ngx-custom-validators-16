@@ -10,7 +10,7 @@ const MAX_DATE_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[maxDate][formControlName],[maxDate][formControl],[maxDate][ngModel]',
+  selector: '[ngv-maxDate][formControlName],[ngv-maxDate][formControl],[ngv-maxDate][ngModel]',
   providers: [MAX_DATE_VALIDATOR],
   standalone: true,
 })

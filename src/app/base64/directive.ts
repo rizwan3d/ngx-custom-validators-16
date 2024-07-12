@@ -10,7 +10,7 @@ const BASE64_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[base64][formControlName],[base64][formControl],[base64][ngModel]',
+  selector: '[ngv-base64][formControlName],[ngv-base64][formControl],[ngv-base64][ngModel]',
   providers: [BASE64_VALIDATOR],
   standalone: true,
 })

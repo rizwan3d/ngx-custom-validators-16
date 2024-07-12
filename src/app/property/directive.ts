@@ -10,7 +10,7 @@ const PROPERTY_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[property][formControlName],[property][formControl],[property][ngModel]',
+  selector: '[ngv-property][formControlName],[ngv-property][formControl],[ngv-property][ngModel]',
   providers: [PROPERTY_VALIDATOR],
   standalone: true,
 })

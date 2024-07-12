@@ -10,7 +10,7 @@ const NUMBER_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[number][formControlName],[number][formControl],[number][ngModel]',
+  selector: '[ngv-number][formControlName],[ngv-number][formControl],[ngv-number][ngModel]',
   providers: [NUMBER_VALIDATOR],
   standalone: true,
 })

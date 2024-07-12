@@ -10,7 +10,7 @@ const MIN_DATE_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[minDate][formControlName],[minDate][formControl],[minDate][ngModel]',
+  selector: '[ngv-minDate][formControlName],[ngv-minDate][formControl],[ngv-minDate][ngModel]',
   providers: [MIN_DATE_VALIDATOR],
   standalone: true,
 })

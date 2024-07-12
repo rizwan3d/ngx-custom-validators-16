@@ -10,7 +10,7 @@ const NOT_INCLUDED_IN_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[notIncludedIn][formControlName],[notIncludedIn][formControl],[notIncludedIn][ngModel]',
+  selector: '[ngv-notIncludedIn][formControlName],[ngv-notIncludedIn][formControl],[ngv-notIncludedIn][ngModel]',
   providers: [NOT_INCLUDED_IN_VALIDATOR],
   standalone: true,
 })

@@ -10,7 +10,7 @@ const INCLUDED_IN_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[includedIn][formControlName],[includedIn][formControl],[includedIn][ngModel]',
+  selector: '[ngv-includedIn][formControlName],[ngv-includedIn][formControl],[ngv-includedIn][ngModel]',
   providers: [INCLUDED_IN_VALIDATOR],
   standalone: true,
 })

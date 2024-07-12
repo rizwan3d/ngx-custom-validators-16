@@ -10,7 +10,7 @@ const GREATER_THAN_EQUAL_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[gte][formControlName],[gte][formControl],[gte][ngModel]',
+  selector: '[ngv-gte][formControlName],[ngv-gte][formControl],[ngv-gte][ngModel]',
   providers: [GREATER_THAN_EQUAL_VALIDATOR],
   standalone: true,
 })

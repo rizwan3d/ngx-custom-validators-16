@@ -10,7 +10,7 @@ const MIN_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[min][formControlName],[min][formControl],[min][ngModel]',
+  selector: '[ngv-min][formControlName],[ngv-min][formControl],[ngv-min][ngModel]',
   providers: [MIN_VALIDATOR],
   standalone: true,
 })

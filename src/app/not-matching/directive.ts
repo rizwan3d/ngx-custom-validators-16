@@ -10,7 +10,7 @@ const NOT_MATCHING_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[notMatching][formControlName],[notMatching][formControl],[notMatching][ngModel]',
+  selector: '[ngv-notMatching][formControlName],[ngv-notMatching][formControl],[ngv-notMatching][ngModel]',
   providers: [NOT_MATCHING_VALIDATOR],
   standalone: true,
 })

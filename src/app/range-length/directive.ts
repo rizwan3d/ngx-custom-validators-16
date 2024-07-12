@@ -10,7 +10,7 @@ const RANGE_LENGTH_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[rangeLength][formControlName],[rangeLength][formControl],[rangeLength][ngModel]',
+  selector: '[ngv-rangeLength][formControlName],[ngv-rangeLength][formControl],[ngv-rangeLength][ngModel]',
   providers: [RANGE_LENGTH_VALIDATOR],
   standalone: true,
 })

@@ -10,7 +10,7 @@ const LESS_THAN_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[lt][formControlName],[lt][formControl],[lt][ngModel]',
+  selector: '[ngv-lt][formControlName],[ngv-lt][formControl],[ngv-lt][ngModel]',
   providers: [LESS_THAN_VALIDATOR],
   standalone: true,
 })

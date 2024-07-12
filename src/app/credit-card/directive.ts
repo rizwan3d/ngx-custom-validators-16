@@ -10,7 +10,7 @@ const CREDIT_CARD_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[creditCard][formControlName],[creditCard][formControl],[creditCard][ngModel]',
+  selector: '[ngv-creditCard][formControlName],[ngv-creditCard][formControl],[ngv-creditCard][ngModel]',
   providers: [CREDIT_CARD_VALIDATOR],
   standalone: true,
 })

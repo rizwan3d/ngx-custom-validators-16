@@ -10,7 +10,7 @@ const GREATER_THAN_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[gt][formControlName],[gt][formControl],[gt][ngModel]',
+  selector: '[ngv-gt][formControlName],[ngv-gt][formControl],[ngv-gt][ngModel]',
   providers: [GREATER_THAN_VALIDATOR],
   standalone: true,
 })

@@ -10,7 +10,7 @@ const DATE_ISO_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[dateISO][formControlName],[dateISO][formControl],[dateISO][ngModel]',
+  selector: '[ngv-dateISO][formControlName],[ngv-dateISO][formControl],[ngv-dateISO][ngModel]',
   providers: [DATE_ISO_VALIDATOR],
   standalone: true,
 })
