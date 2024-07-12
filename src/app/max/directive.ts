@@ -10,8 +10,9 @@ const MAX_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[max][formControlName],[max][formControl],[max][ngModel]',
-  providers: [MAX_VALIDATOR]
+  selector: '[ngv-max][formControlName],[ngv-max][formControl],[ngv-max][ngModel]',
+  providers: [MAX_VALIDATOR],
+  standalone: true,
 })
 export class MaxValidator implements Validator, OnInit, OnChanges {
   @Input() max: number;
@@ -34,7 +35,7 @@ export class MaxValidator implements Validator, OnInit, OnChanges {
     }
   }
 
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return this.validator(c);
   }
 

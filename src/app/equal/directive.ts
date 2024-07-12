@@ -10,8 +10,9 @@ const EQUAL_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[equal][formControlName],[equal][formControl],[equal][ngModel]',
-  providers: [EQUAL_VALIDATOR]
+  selector: '[ngv-equal][formControlName],[ngv-equal][formControl],[ngv-equal][ngModel]',
+  providers: [EQUAL_VALIDATOR],
+  standalone: true,
 })
 export class EqualValidator implements Validator, OnInit, OnChanges {
   @Input() equal: any;
@@ -34,7 +35,7 @@ export class EqualValidator implements Validator, OnInit, OnChanges {
     }
   }
 
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return this.validator(c);
   }
 
