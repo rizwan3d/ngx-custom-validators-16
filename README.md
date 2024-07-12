@@ -49,7 +49,7 @@ npm i @davidda/ngx-custom-validators --save
 
 The paramater of each validatiom error (if it has one) is accessible in the template with `reason`.
 ```html
-<input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [gt]="10">
+<input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [ngv-gt]="10">
 <!-- Will display : error message and must be greater than 10 -->
 <p *ngIf="field.errors?.gt">error message and must be greater than {{ field.errors?.reason }}</p>
 ``` 
@@ -84,7 +84,7 @@ import { EmailValidator } from "@davidda/ngx-custom-validators";
 })
 ```
 
-### range length - rangeLength
+### length range (of a string value) - rangeLength
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" [ngv-rangeLength]="[5, 9]">
