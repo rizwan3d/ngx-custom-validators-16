@@ -10,11 +10,12 @@ const BASE64_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[base64][formControlName],[base64][formControl],[base64][ngModel]',
-  providers: [BASE64_VALIDATOR]
+  selector: '[ngv-base64][formControlName],[ngv-base64][formControl],[ngv-base64][ngModel]',
+  providers: [BASE64_VALIDATOR],
+  standalone: true,
 })
 export class Base64Validator implements Validator {
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return base64(c);
   }
 }

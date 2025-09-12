@@ -10,8 +10,9 @@ const NOT_MATCHING_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[notMatching][formControlName],[notMatching][formControl],[notMatching][ngModel]',
-  providers: [NOT_MATCHING_VALIDATOR]
+  selector: '[ngv-notMatching][formControlName],[ngv-notMatching][formControl],[ngv-notMatching][ngModel]',
+  providers: [NOT_MATCHING_VALIDATOR],
+  standalone: true,
 })
 export class NotMatchingValidator implements Validator, OnInit, OnChanges {
   @Input() notMatching: string | RegExp;
@@ -34,7 +35,7 @@ export class NotMatchingValidator implements Validator, OnInit, OnChanges {
     }
   }
 
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return this.validator(c);
   }
 

@@ -1,3 +1,8 @@
+### [13.0.0]
+- switched to standalone components => either import CustomFormsModule as before, or import the individual directives you need
+- BREAKING CHANGE: prefixed all directives with "ngv-" to avoid naming collisions
+### [12.0.0]
+- Anbgular 16+ support
 ### [11.0.0]
 - Angular 11 support
 ### [10.0.0]

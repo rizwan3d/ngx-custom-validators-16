@@ -10,8 +10,9 @@ const PROPERTY_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[property][formControlName],[property][formControl],[property][ngModel]',
-  providers: [PROPERTY_VALIDATOR]
+  selector: '[ngv-property][formControlName],[ngv-property][formControl],[ngv-property][ngModel]',
+  providers: [PROPERTY_VALIDATOR],
+  standalone: true,
 })
 export class PropertyValidator implements Validator, OnInit, OnChanges {
   @Input() property: string;
@@ -34,7 +35,7 @@ export class PropertyValidator implements Validator, OnInit, OnChanges {
     }
   }
 
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return this.validator(c);
   }
 

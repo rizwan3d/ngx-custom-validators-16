@@ -123,7 +123,7 @@ const CustomDirectives = [
 ];
 
 @NgModule({
-  declarations: [CustomDirectives],
+  imports: [CustomDirectives],
   exports: [CustomDirectives]
 })
 export class CustomFormsModule { }

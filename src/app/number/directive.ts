@@ -10,11 +10,12 @@ const NUMBER_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[number][formControlName],[number][formControl],[number][ngModel]',
-  providers: [NUMBER_VALIDATOR]
+  selector: '[ngv-number][formControlName],[ngv-number][formControl],[ngv-number][ngModel]',
+  providers: [NUMBER_VALIDATOR],
+  standalone: true,
 })
 export class NumberValidator implements Validator {
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return number(c);
   }
 }

@@ -1,13 +1,12 @@
 import { AbstractControl, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { isPresent } from '../util/lang';
+import { IsEmailOptions, isEmail } from 'validator';
 
-export const email: ValidatorFn = (control: AbstractControl): ValidationErrors => {
+export const email = (control: AbstractControl, options?: IsEmailOptions): ValidationErrors => {
   if (isPresent(Validators.required(control))) {
     return null;
   }
 
   const v: string = control.value;
-  /* tslint:disable */
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(v) ? null : { 'email': true };
-  /* tslint:enable */
+  return isEmail(v, options) ? null : { email: true };
 };

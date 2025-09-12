@@ -10,8 +10,9 @@ const ARRAY_LENGTH_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[arrayLength][formControlName],[arrayLength][formControl],[arrayLength][ngModel]',
-  providers: [ARRAY_LENGTH_VALIDATOR]
+  selector: '[ngv-arrayLength][formControlName],[ngv-arrayLength][formControl],[ngv-arrayLength][ngModel]',
+  providers: [ARRAY_LENGTH_VALIDATOR],
+  standalone: true,
 })
 export class ArrayLengthValidator implements Validator, OnInit, OnChanges {
   @Input() arrayLength: number;
@@ -34,7 +35,7 @@ export class ArrayLengthValidator implements Validator, OnInit, OnChanges {
     }
   }
 
-  validate(c: AbstractControl): {[key: string]: any} {
+  validate(c: AbstractControl): { [key: string]: any } {
     return this.validator(c);
   }
 
